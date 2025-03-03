@@ -1,4 +1,4 @@
-class MovementBounce extends Component{
+class BallCollider extends Component{
     constructor() {
         super()
         this.timeSinceLastShot = 0
@@ -7,10 +7,6 @@ class MovementBounce extends Component{
 
     update() {
         this.parent.transform.x += this.speed / Time.fps
-
-
-        
-
-
+        //how do i check if this.parent is currently colliding?
     }
 }

@@ -7,6 +7,7 @@ class MainScene extends Scene {
       playerGameObject.transform.y = 100
 
       this.gameObjects.push(playerGameObject)
+      this.gameObjects.push(new BouncyBall())
       console.log(this)
 
       //this.gameObjects.push(new TextGameObject())
