@@ -5,7 +5,6 @@ class BouncyBall extends GameObject{
         //initialize position
         this.transform.x = 100
         this.transform.y = 100
-
         
 
         this.addComponent(new Circle())

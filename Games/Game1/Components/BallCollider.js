@@ -6,7 +6,7 @@ class BallCollider extends Component{
     }
 
     update() {
-        this.parent.transform.x += this.speed / Time.fps
+        //this.parent.transform.x += this.speed / Time.fps
         //how do i check if this.parent is currently colliding?
     }
 }
