@@ -1,24 +1,27 @@
-class VectorBounce extends Component{
+class bodySegLogic extends Component {
     constructor() {
         super()
-        this.timeSinceLastShot = 0
-        this.speed = 400
+    }
 
-        //---persistant vars----
-        //this.angle = Math.floor(Math.random() * 360) + 0
-        this.angle = 90
-
-        //entity speed should be a property of the bouncy ball and not of the component vectorBounce(), how can i do that?
-        this.entitySpeed = 5
-        this.dirX = 1
-        this.dirY = 1
+    update(){
+        this.angle = 0
+        this.speed = 0
+        this.move()
         
+    }
+
+
+    normalize(){
+
+        magnitude = Math.sqrt(x**2 + y **2)
+
+        y = y / magnitude
+        x = x / magnitude
 
 
     }
-    update(){}
+
     move() {
-        
         
         this.radians = this.angle * (Math.PI / 180)
         this.vecX = Math.cos(this.radians) * this.dirX
@@ -30,9 +33,7 @@ class VectorBounce extends Component{
         this.parent.transform.x += this.vecX * (this.speed * Time.deltaTime )
         this.parent.transform.y += -1*(this.vecY * (this.speed * Time.deltaTime))
 
-        
-        
-
-
     }
+
+
 }
