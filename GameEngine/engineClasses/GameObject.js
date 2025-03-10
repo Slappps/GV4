@@ -22,4 +22,10 @@ class GameObject {
             }
         }
     }
+
+    queryScene(){
+        objThis = currentScene.returnObject('name')
+        return objThis
+    }
+
 }

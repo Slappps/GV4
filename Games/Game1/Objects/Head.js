@@ -1,4 +1,4 @@
-class PlayerGameObject extends GameObject{
+class Head extends GameObject{
     constructor(){
         super()
         this.addComponent(new Circle())
