@@ -9,6 +9,8 @@ class Scene {
                 gameObject.update();
             }
         }
+
+        
     }
     draw(ctx) {
         ctx.fillStyle = this.backgroundColor;
