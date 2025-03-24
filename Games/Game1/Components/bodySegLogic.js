@@ -1,31 +1,36 @@
 class bodySegLogic extends Component {
     constructor() {
         super()
+        this.speed = 40
+
     }
     update(){
-        this.angle = 0
-        this.speed = 0
-        this.move()
-    }
-    normalize(){
 
-        magnitude = Math.sqrt(x**2 + y **2)
-
-        y = y / magnitude
-        x = x / magnitude
-    }
-    move() {
         
-        this.radians = this.angle * (Math.PI / 180)
-        this.vecX = Math.cos(this.radians) * this.dirX
-        this.vecY = Math.sin(this.radians) * this.dirY
         
-        //Time.deltaTime? How does js know which instance of Time are we reading this variable from from? Is this similar to Math.PI?
-        //vector angle not working, how is transformx,y diffrent from GV3
-        this.parent.transform.x += this.vecX * (this.speed * Time.deltaTime )
-        this.parent.transform.y += -1*(this.vecY * (this.speed * Time.deltaTime))
+    }
+    
+    move(xparent,yparent) {
+        
+        let relx = -1 * (this.parent.transform.x - xparent)
+        let rely = -1 * (this.parent.transform.y - yparent)
+
+
+        let mag = Math.sqrt((relx**2) + (rely**2))
+
+        let x = relx / mag
+        let y = rely / mag
+
+        console.log(relx , rely, "||", x,y)
+
+        //this.parent.transform.x += x * (this.speed * Time.deltaTime )
+        //this.parent.transform.y += -1*(y * (this.speed * Time.deltaTime))
 
     }
 
+    normalize(x1,y1){
+
+        
+    }
     
 }

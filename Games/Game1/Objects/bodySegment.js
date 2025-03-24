@@ -3,10 +3,8 @@ class BodySegment extends GameObject{
         super()
 
         //initialize position
-        this.transform.x = 100
-        this.transform.y = 100
-
         
+
         
         this.addComponent(new Circle())
         this.addComponent(new bodySegLogic())
