@@ -32,7 +32,7 @@ class HeadLogic extends Component {
         for (let i = 0; i < this.body.length; i++){
             let seg = this.body[i]
             
-            for (let j = 0; j < this.body.length; j++){
+            for (let j = 0; j < seg.components.length; j++){
                 
                 let x = seg.components[j]
                 

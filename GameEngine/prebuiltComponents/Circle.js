@@ -1,7 +1,7 @@
 class Circle extends Component{
-  constructor(){
+  constructor(color = 'green'){
     super()
-    this.fillStyle = "green"
+    this.fillStyle = color
     this.strokeStyle = "purple"
     this.lineWidth = 5
   }
