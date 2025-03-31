@@ -10,8 +10,11 @@ class bodySegLogic extends Component {
         
     }
     
-    move(xparent,yparent) {
+    move(targetXY) {
         
+        x = targetXY[0]
+        y = targetXY[1]
+
         let relx = -1 * (this.parent.transform.x - xparent)
         let rely = 1 * (this.parent.transform.y - yparent)
 
