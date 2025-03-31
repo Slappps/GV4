@@ -15,6 +15,15 @@ class GameObject {
             }
         }
     }
+
+    setup(ctx) {
+        for (let component of this.components) {
+            if (component.setup) {
+                component.setup(ctx)
+            }
+        }
+    }
+
     draw(ctx) {
         for (let component of this.components) {
             if (component.draw) {

@@ -3,6 +3,7 @@ class Engine {
    * The game loop.
    * The game loop calls update and draw using a timer
    */
+  static currentScene = null
   static gameLoop() {
     let canvas = document.querySelector("#canv")
     let ctx = canvas.getContext("2d")
@@ -13,10 +14,11 @@ class Engine {
     canvas.height = window.innerHeight
 
     // Update the current scene
-    currentScene.update()
+    
+    Engine.currentScene.update()
 
     //Draw in world space
-    currentScene.draw(ctx)
+    Engine.currentScene.draw(ctx)
   }
 
   /** Setup the game **/
@@ -28,8 +30,12 @@ class Engine {
     document.addEventListener("mouseup", Input.mouseup)
     document.addEventListener("mousedown", Input.mousedown)
 
+    Engine.currentScene.setup()
+
     //In the background, create a thread and call
     //gameLoop every 100ms.
     setInterval(Engine.gameLoop, Time.ms)
   }
+
+  
 }

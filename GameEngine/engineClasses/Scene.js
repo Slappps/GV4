@@ -1,4 +1,5 @@
 class Scene {
+    
     gameObjects = []
     constructor(backgroundColor) {
         this.backgroundColor = backgroundColor
@@ -12,6 +13,15 @@ class Scene {
 
         
     }
+    
+    setup(){
+        for(const gameObject of this.gameObjects){
+            if(gameObject.setup){
+                gameObject.setup();
+            }
+        }
+    }
+
     draw(ctx) {
         ctx.fillStyle = this.backgroundColor;
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)

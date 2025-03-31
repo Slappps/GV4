@@ -2,7 +2,7 @@ class MainScene extends Scene {
     constructor() {
       super("lightgray")
       
-      let playerGameObject = new Head(this)
+      let playerGameObject = new Head()
       playerGameObject.transform.x = 100
       playerGameObject.transform.y = 100
 
