@@ -22,12 +22,12 @@ class HeadLogic extends Component {
     }
 
     // variable x is in addBodySegment and moveTail. I want it to be local to each function. How do i do this. using: var, let, or this.
-    moveTail() {
+    moveTail1() {
         for (let i = 0; i < this.body.length; i++) {
             let seg = this.body[i]
-
             
-
+            
+            
             for (let j = 0; j < seg.components.length; j++) {
 
                 let x = seg.components[j]
@@ -40,4 +40,20 @@ class HeadLogic extends Component {
             }
         }
     }
+
+    moveTail2(){
+
+        for (let i = 0; i < this.body.length; i++){
+
+            
+
+        }
+
+
+
+
+
+    }
+
+
 }

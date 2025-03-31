@@ -29,7 +29,7 @@ class bodySegLogic extends Component {
     }
 
     normalize(x1,y1){
-
+        
         
     }
     
