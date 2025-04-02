@@ -1,13 +1,17 @@
 class KeyboardMovement extends Component {
+    constructor(speed = 200) {
+        super()
+        this.speed = speed
+    }
     update() {
-        let speed = 100
+        
         if (Input.keysDown.includes("ArrowLeft"))
-            this.parent.transform.x -= speed / Time.fps
+            this.parent.transform.x -= this.speed / Time.fps
         if (Input.keysDown.includes("ArrowRight"))
-            this.parent.transform.x += speed / Time.fps
+            this.parent.transform.x += this.speed / Time.fps
         if (Input.keysDown.includes("ArrowUp"))
-            this.parent.transform.y -= speed / Time.fps
+            this.parent.transform.y -= this.speed / Time.fps
         if (Input.keysDown.includes("ArrowDown"))
-            this.parent.transform.y += speed / Time.fps
+            this.parent.transform.y += this.speed / Time.fps
     }
 }

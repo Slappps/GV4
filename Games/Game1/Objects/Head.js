@@ -3,7 +3,7 @@ class Head extends GameObject{
         super()
         
         this.addComponent(new Circle())
-        this.addComponent(new KeyboardMovement())
+        this.addComponent(new KeyboardMovement(300))
         this.addComponent(new HeadLogic())
         
     }

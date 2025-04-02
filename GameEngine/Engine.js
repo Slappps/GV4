@@ -19,6 +19,7 @@ class Engine {
 
     //Draw in world space
     Engine.currentScene.draw(ctx)
+    
   }
 
   /** Setup the game **/
